@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Game</title>
+    <link rel='stylesheet' href='styles.css'>
+  </head>
+  <body>
+    <header> <!--This is the name-->
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <div id="secret-message"></div>
+    <div class='scoreboard'> <!--This composes the scoreboard at the top -->
+      <!--This is the left score-->
+      <div id='user-label' class='badge'>user</div>
+      <!--This is the right score-->
+      <div id='computer-label' class='badge'>comp</div>
+      <!--This is the part that says 0:0; Left is the user's, right is the computer's-->
+      <span id='user-score'>0</span>:<span id='computer-score'>0</div>
+    <!--This is the message displayed directly below the scoreboard-->
+    <div class='result'>
+      <p>Time to party</p>
+    </div>
+    <!--These are the images; rock, paper, scissors-->
+    <div id="choices" class='choices'>
+      <div class=choice id='Rock'>
+        <img src='images/Rock.png' alt='A hand rocking out'>
+      </div>
+      <div class=choice id='Paper'>
+        <img src='images/Paper.png' alt='A piece of paper'>
+      </div>
+      <div class=choice id='Scissors'>
+        <img src='images/Scissors.png' alt='A pair of sharp scissors'>
+      </div>
+    </div>
+    <div id="stats" class='away'>
+      <h2 id="percent-score">Your Percent Score: ##%</h2>
+      <h2 id="number-missed">You missed ## rounds.</h2>
+    </div>
+    <form name="RPS Data" method="POST" data-netlify="true">
+      <label for="name"></label>
+      <input type="text" name="name" id="name-form" placeholder="Name" class="away"></input>
+      <label for="text"></label>
+      <input type="text" name="text" id="text" class="away"></input>
+      <button type="submit" id="submit-button" class="away">Submit to Scoreboard</button>
+</form>
+    <!--This says Make your move-->
+    <p id='action-message'>Make your move.</p>
+    <!--This is just some attribution information-->
+    <footer>Copyright &copy; Alexander Ament 2022. <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Images found here.</a></footer>
+    <script src='main.js' charset='utf-8'></script>
+  </body>
+</html>
